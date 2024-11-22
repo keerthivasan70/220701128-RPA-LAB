@@ -1,0 +1,608 @@
+<Activity mc:Ignorable="sap sap2010" x:Class="Main" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:s="clr-namespace:System;assembly=System.Private.CoreLib" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=System.Private.CoreLib" xmlns:sd="clr-namespace:System.Data;assembly=System.Data.Common" xmlns:str="clr-namespace:System.Text.RegularExpressions;assembly=System.Text.RegularExpressions" xmlns:ue="clr-namespace:UiPath.Excel;assembly=UiPath.Excel.Activities" xmlns:ueab="clr-namespace:UiPath.Excel.Activities.Business;assembly=UiPath.Excel.Activities" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:uix="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <x:Members>
+    <x:Property Name="BreakTriggerScopeInArgument" Type="InArgument(x:String)" />
+  </x:Members>
+  <VisualBasic.Settings>
+    <x:Null />
+  </VisualBasic.Settings>
+  <sap:VirtualizedContainerService.HintSize>970.4,10045.6</sap:VirtualizedContainerService.HintSize>
+  <sap2010:WorkflowViewState.IdRef>ActivityBuilder_1</sap2010:WorkflowViewState.IdRef>
+  <TextExpression.NamespacesForImplementation>
+    <sco:Collection x:TypeArguments="x:String">
+      <x:String>System.Activities</x:String>
+      <x:String>System.Activities.Statements</x:String>
+      <x:String>System.Activities.Expressions</x:String>
+      <x:String>System.Activities.Validation</x:String>
+      <x:String>System.Activities.XamlIntegration</x:String>
+      <x:String>Microsoft.VisualBasic</x:String>
+      <x:String>Microsoft.VisualBasic.Activities</x:String>
+      <x:String>System</x:String>
+      <x:String>System.Collections</x:String>
+      <x:String>System.Collections.Generic</x:String>
+      <x:String>System.Collections.ObjectModel</x:String>
+      <x:String>System.Data</x:String>
+      <x:String>System.Diagnostics</x:String>
+      <x:String>System.Drawing</x:String>
+      <x:String>System.IO</x:String>
+      <x:String>System.Linq</x:String>
+      <x:String>System.Net.Mail</x:String>
+      <x:String>System.Xml</x:String>
+      <x:String>System.Xml.Linq</x:String>
+      <x:String>UiPath.Core</x:String>
+      <x:String>UiPath.Core.Activities</x:String>
+      <x:String>System.Windows.Markup</x:String>
+      <x:String>GlobalVariablesNamespace</x:String>
+      <x:String>GlobalConstantsNamespace</x:String>
+      <x:String>System.Reflection</x:String>
+      <x:String>System.Runtime.Serialization</x:String>
+      <x:String>UiPath.UIAutomationNext.Enums</x:String>
+      <x:String>UiPath.UIAutomationCore.Contracts</x:String>
+      <x:String>UiPath.UIAutomationNext.Activities</x:String>
+      <x:String>UiPath.Shared.Activities</x:String>
+      <x:String>UiPath.Platform.ObjectLibrary</x:String>
+      <x:String>System.Security</x:String>
+      <x:String>System.ComponentModel</x:String>
+      <x:String>UiPath.UIAutomationNext.Activities.Models</x:String>
+      <x:String>System.Text.RegularExpressions</x:String>
+      <x:String>UiPath.Excel</x:String>
+      <x:String>System.Xml.Serialization</x:String>
+      <x:String>UiPath.Excel.Activities.Business</x:String>
+      <x:String>UiPath.Activities.System.Text</x:String>
+      <x:String>UiPath.Excel.Model</x:String>
+      <x:String>UiPath.DataTableUtilities</x:String>
+      <x:String>Microsoft.VisualBasic.CompilerServices</x:String>
+      <x:String>UiPath.Mail</x:String>
+      <x:String>UiPath.Mail.SMTP.Activities</x:String>
+      <x:String>UiPath.Mail.Activities</x:String>
+    </sco:Collection>
+  </TextExpression.NamespacesForImplementation>
+  <TextExpression.ReferencesForImplementation>
+    <sco:Collection x:TypeArguments="AssemblyReference">
+      <AssemblyReference>Microsoft.VisualBasic</AssemblyReference>
+      <AssemblyReference>mscorlib</AssemblyReference>
+      <AssemblyReference>PresentationCore</AssemblyReference>
+      <AssemblyReference>PresentationFramework</AssemblyReference>
+      <AssemblyReference>System</AssemblyReference>
+      <AssemblyReference>System.Activities</AssemblyReference>
+      <AssemblyReference>System.Collections</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.TypeConverter</AssemblyReference>
+      <AssemblyReference>System.Core</AssemblyReference>
+      <AssemblyReference>System.Data</AssemblyReference>
+      <AssemblyReference>System.Data.Common</AssemblyReference>
+      <AssemblyReference>System.Data.DataSetExtensions</AssemblyReference>
+      <AssemblyReference>System.Drawing</AssemblyReference>
+      <AssemblyReference>System.Drawing.Common</AssemblyReference>
+      <AssemblyReference>System.Drawing.Primitives</AssemblyReference>
+      <AssemblyReference>System.Linq</AssemblyReference>
+      <AssemblyReference>System.Net.Mail</AssemblyReference>
+      <AssemblyReference>System.ObjectModel</AssemblyReference>
+      <AssemblyReference>System.Private.CoreLib</AssemblyReference>
+      <AssemblyReference>System.Xaml</AssemblyReference>
+      <AssemblyReference>System.Xml</AssemblyReference>
+      <AssemblyReference>System.Xml.Linq</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.UiAutomation.Activities</AssemblyReference>
+      <AssemblyReference>WindowsBase</AssemblyReference>
+      <AssemblyReference>UiPath.Studio.Constants</AssemblyReference>
+      <AssemblyReference>System.Reflection.DispatchProxy</AssemblyReference>
+      <AssemblyReference>System.Reflection.TypeExtensions</AssemblyReference>
+      <AssemblyReference>System.Reflection.Metadata</AssemblyReference>
+      <AssemblyReference>UiPath.Workflow</AssemblyReference>
+      <AssemblyReference>System.IO.FileSystem.Watcher</AssemblyReference>
+      <AssemblyReference>System.IO.Packaging</AssemblyReference>
+      <AssemblyReference>System.IO.FileSystem.AccessControl</AssemblyReference>
+      <AssemblyReference>System.IO.FileSystem.DriveInfo</AssemblyReference>
+      <AssemblyReference>NPOI</AssemblyReference>
+      <AssemblyReference>UiPath.Excel.Activities.Design</AssemblyReference>
+      <AssemblyReference>System.Memory.Data</AssemblyReference>
+      <AssemblyReference>System.Console</AssemblyReference>
+      <AssemblyReference>System.Configuration.ConfigurationManager</AssemblyReference>
+      <AssemblyReference>System.Security.Permissions</AssemblyReference>
+      <AssemblyReference>System.ComponentModel</AssemblyReference>
+      <AssemblyReference>System.Memory</AssemblyReference>
+      <AssemblyReference>System.Private.Uri</AssemblyReference>
+      <AssemblyReference>System.Collections.NonGeneric</AssemblyReference>
+      <AssemblyReference>System.Private.ServiceModel</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization.Formatters</AssemblyReference>
+      <AssemblyReference>System.Private.DataContractSerialization</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization.Primitives</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationNext</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationCore</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationNext.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Excel.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Mail.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Testing.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.OCR.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Platform</AssemblyReference>
+      <AssemblyReference>System.Runtime.InteropServices</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.EventBasedAsync</AssemblyReference>
+      <AssemblyReference>Microsoft.Win32.Primitives</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.Primitives</AssemblyReference>
+      <AssemblyReference>System.Text.RegularExpressions</AssemblyReference>
+      <AssemblyReference>UiPath.Excel</AssemblyReference>
+      <AssemblyReference>System.Private.Xml</AssemblyReference>
+      <AssemblyReference>System.Data.SqlClient</AssemblyReference>
+      <AssemblyReference>Microsoft.VisualBasic.Forms</AssemblyReference>
+      <AssemblyReference>Microsoft.VisualBasic.Core</AssemblyReference>
+      <AssemblyReference>UiPath.Mail</AssemblyReference>
+      <AssemblyReference>UiPath.Mail.Activities.Design</AssemblyReference>
+      <AssemblyReference>System.Linq.Expressions</AssemblyReference>
+      <AssemblyReference>System.Linq.Parallel</AssemblyReference>
+      <AssemblyReference>System.Collections.Immutable</AssemblyReference>
+      <AssemblyReference>System.Linq.Queryable</AssemblyReference>
+    </sco:Collection>
+  </TextExpression.ReferencesForImplementation>
+  <Sequence DisplayName="Main Sequence" sap:VirtualizedContainerService.HintSize="980.8,9980.8" sap2010:WorkflowViewState.IdRef="Sequence_1">
+    <Sequence.Variables>
+      <Variable x:TypeArguments="s:String[]" Name="FilePath_List" />
+      <Variable x:TypeArguments="x:String" Name="OCR" />
+      <Variable x:TypeArguments="scg:IEnumerable(str:Match)" Name="Aadhaar_Number" />
+      <Variable x:TypeArguments="sd:DataTable" Name="Aadhaar_List" />
+      <Variable x:TypeArguments="sd:DataTable" Name="Aadhaar_Database" />
+      <Variable x:TypeArguments="x:Int32" Default="2" Name="RowItr" />
+      <Variable x:TypeArguments="x:Int32" Name="Flag" />
+    </Sequence.Variables>
+    <sap:WorkflowViewStateService.ViewState>
+      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+      </scg:Dictionary>
+    </sap:WorkflowViewStateService.ViewState>
+    <ueab:ExcelProcessScopeX DisplayAlerts="{x:Null}" ExistingProcessAction="{x:Null}" FileConflictResolution="{x:Null}" LaunchMethod="{x:Null}" LaunchTimeout="{x:Null}" MacroSettings="{x:Null}" ProcessMode="{x:Null}" ShowExcelWindow="{x:Null}" DisplayName="Excel Process Scope" sap:VirtualizedContainerService.HintSize="918.4,749.6" sap2010:WorkflowViewState.IdRef="ExcelProcessScopeX_1">
+      <ueab:ExcelProcessScopeX.Body>
+        <ActivityAction x:TypeArguments="ui:IExcelProcess">
+          <ActivityAction.Argument>
+            <DelegateInArgument x:TypeArguments="ui:IExcelProcess" Name="ExcelProcessScopeTag" />
+          </ActivityAction.Argument>
+          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="601.6,663.2" sap2010:WorkflowViewState.IdRef="Sequence_5">
+            <sap:WorkflowViewStateService.ViewState>
+              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+              </scg:Dictionary>
+            </sap:WorkflowViewStateService.ViewState>
+            <ueab:ExcelApplicationCard Password="{x:Null}" ReadFormatting="{x:Null}" DisplayName="Use Excel File" sap:VirtualizedContainerService.HintSize="539.2,551.2" sap2010:WorkflowViewState.IdRef="ExcelApplicationCard_1" ResizeWindow="None" WorkbookPath="Aadhaar_Verification_Needed.xlsx">
+              <ueab:ExcelApplicationCard.Body>
+                <ActivityAction x:TypeArguments="ue:IWorkbookQuickHandle">
+                  <ActivityAction.Argument>
+                    <DelegateInArgument x:TypeArguments="ue:IWorkbookQuickHandle" Name="Excel" />
+                  </ActivityAction.Argument>
+                  <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="505.6,281.6" sap2010:WorkflowViewState.IdRef="Sequence_6">
+                    <sap:WorkflowViewStateService.ViewState>
+                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                      </scg:Dictionary>
+                    </sap:WorkflowViewStateService.ViewState>
+                    <ueab:ReadRangeX DisplayName="Read Range" sap:VirtualizedContainerService.HintSize="443.2,169.6" sap2010:WorkflowViewState.IdRef="ReadRangeX_1" Range="[Excel.Sheet(&quot;Sheet1&quot;)]" SaveTo="[Aadhaar_List]" />
+                  </Sequence>
+                </ActivityAction>
+              </ueab:ExcelApplicationCard.Body>
+            </ueab:ExcelApplicationCard>
+          </Sequence>
+        </ActivityAction>
+      </ueab:ExcelProcessScopeX.Body>
+    </ueab:ExcelProcessScopeX>
+    <Assign sap:VirtualizedContainerService.HintSize="918.4,81.6" sap2010:WorkflowViewState.IdRef="Assign_1">
+      <Assign.To>
+        <OutArgument x:TypeArguments="s:String[]">[FilePath_List]</OutArgument>
+      </Assign.To>
+      <Assign.Value>
+        <InArgument x:TypeArguments="s:String[]">[Directory.GetFiles("Aadhaar Images")]</InArgument>
+      </Assign.Value>
+    </Assign>
+    <ui:ForEach x:TypeArguments="x:String" CurrentIndex="{x:Null}" DisplayName="For Each" sap:VirtualizedContainerService.HintSize="918.4,8957.6" sap2010:WorkflowViewState.IdRef="ForEach`1_1" Values="[FilePath_List]">
+      <ui:ForEach.Body>
+        <ActivityAction x:TypeArguments="x:String">
+          <ActivityAction.Argument>
+            <DelegateInArgument x:TypeArguments="x:String" Name="currentItem" />
+          </ActivityAction.Argument>
+          <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="884.8,8769.6" sap2010:WorkflowViewState.IdRef="Sequence_2">
+            <sap:WorkflowViewStateService.ViewState>
+              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+              </scg:Dictionary>
+            </sap:WorkflowViewStateService.ViewState>
+            <uix:NApplicationCard AttachMode="ByInstance" DisplayName="Use Browser Chrome: Free OCR API V2023, Online OCR, Searchable PDF Creator, On-Premise OCR Software" sap:VirtualizedContainerService.HintSize="841.6,1877.6" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" InteractionMode="DebuggerApi" ScopeGuid="b9c8e7de-e9d6-42ab-b2a2-114e7167b5a2" Version="V2">
+              <uix:NApplicationCard.Body>
+                <ActivityAction x:TypeArguments="x:Object">
+                  <ActivityAction.Argument>
+                    <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
+                  </ActivityAction.Argument>
+                  <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="545.6,1660.8" sap2010:WorkflowViewState.IdRef="Sequence_3">
+                    <sap:WorkflowViewStateService.ViewState>
+                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                      </scg:Dictionary>
+                    </sap:WorkflowViewStateService.ViewState>
+                    <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'Upload image'" sap:VirtualizedContainerService.HintSize="483.2,157.6" sap2010:WorkflowViewState.IdRef="NClick_1" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="b9c8e7de-e9d6-42ab-b2a2-114e7167b5a2" Version="V3">
+                      <uix:NClick.Target>
+                        <uix:TargetAnchorable BrowserURL="https://ocr.space/" CVScreenId="2d98b1bf-2dc4-4075-be7e-0298a000a309" CvTextArea="794, 748, 220, 18" CvTextArgument="Choose File No file chosen" CvType="Text" DesignTimeRectangle="771, 737, 775, 45" DesignTimeScaleFactor="1.25" ElementType="InputBox" FriendlyName="'INPUT imageFile'" FullSelectorArgument="&lt;webctrl id='imageFile' tag='INPUT' /&gt;" FuzzySelectorArgument="&lt;webctrl id='imageFile' tag='INPUT' type='file' class='form-control choose' aaname='' /&gt;" Guid="5fb5cf57-c960-4ba4-9119-ba025c900ac7" InformativeScreenshot="9096b5ec920c0ee880f0bb4d1530d5da.png" IsResponsive="True" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Free OCR API V2023, Online OCR, Searchable PDF Creator, On-Premise OCR Software' /&gt;" SearchSteps="FuzzySelector, CV" Version="V2" Visibility="Interactive">
+                          <uix:TargetAnchorable.Anchors>
+                            <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                              <uix:Target CVScreenId="2d98b1bf-2dc4-4075-be7e-0298a000a309" CvTextArea="369, 742, 368, 18" CvTextArgument="Upload image or PDF file (.png..jpg..webp or .PDF)" CvType="Text" DesignTimeRectangle="371, 737, 375, 26" ElementType="Text" FriendlyName="'Upload image'" FullSelectorArgument="&lt;webctrl tag='P' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='P' type='' class='' aaname='Upload image or PDF file (.png,.jpg,.webp or .PDF)' check:innerText='Upload image or PDF file (.png,.jpg,.webp or .PDF)' /&gt;" SearchSteps="FuzzySelector, CV" />
+                            </scg:List>
+                          </uix:TargetAnchorable.Anchors>
+                        </uix:TargetAnchorable>
+                      </uix:NClick.Target>
+                    </uix:NClick>
+                    <uix:NApplicationCard AttachMode="ByInstance" DisplayName="Use Application: Open" sap:VirtualizedContainerService.HintSize="483.2,822.4" sap2010:WorkflowViewState.IdRef="NApplicationCard_2" ScopeGuid="6b772b53-90fd-4bd5-9f50-ac11dc50e2cc" Version="V2">
+                      <uix:NApplicationCard.Body>
+                        <ActivityAction x:TypeArguments="x:Object">
+                          <ActivityAction.Argument>
+                            <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
+                          </ActivityAction.Argument>
+                          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="449.6,531.2" sap2010:WorkflowViewState.IdRef="Sequence_4">
+                            <sap:WorkflowViewStateService.ViewState>
+                              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                              </scg:Dictionary>
+                            </sap:WorkflowViewStateService.ViewState>
+                            <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="Type Into 'Edit'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="387.2,218.4" sap2010:WorkflowViewState.IdRef="NTypeInto_3" InteractionMode="HardwareEvents" ScopeIdentifier="6b772b53-90fd-4bd5-9f50-ac11dc50e2cc" Text="[currentItem.Split(&quot;\&quot;c)(1)]" Version="V3">
+                              <uix:NTypeInto.Target>
+                                <uix:TargetAnchorable CVScreenId="16bd0151-690b-4347-9540-84cb920d0aba" CvElementArea="225, 1045, 1420, 31" CvType="InputBox" DesignTimeRectangle="234, 1051, 1383, 20" DesignTimeScaleFactor="1.25" ElementType="InputBox" FriendlyName="'Edit'" FullSelectorArgument="&lt;wnd ctrlid='1148' /&gt;&lt;wnd ctrlid='1148' /&gt;&lt;wnd ctrlid='1148' /&gt;" FuzzySelectorArgument="&lt;wnd ctrlid='1148' /&gt;&lt;wnd ctrlid='1148' /&gt;&lt;wnd ctrlid='1148' /&gt;" Guid="f4012960-7e42-4d9f-a5ee-85240c702d25" InformativeScreenshot="c28b0f220a14faf4e254f383bebfa0bf.png" ScopeSelectorArgument="&lt;wnd app='chrome.exe' cls='#32770' title='Open' /&gt;" SearchSteps="Selector, FuzzySelector, CV" Version="V2" Visibility="Interactive" />
+                              </uix:NTypeInto.Target>
+                            </uix:NTypeInto>
+                            <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'unchecked'" sap:VirtualizedContainerService.HintSize="387.2,157.6" sap2010:WorkflowViewState.IdRef="NClick_4" InteractionMode="HardwareEvents" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="6b772b53-90fd-4bd5-9f50-ac11dc50e2cc" Version="V3">
+                              <uix:NClick.Target>
+                                <uix:TargetAnchorable CVScreenId="16bd0151-690b-4347-9540-84cb920d0aba" CvElementArea="1654, 1081, 112, 34" CvTextArea="1690, 1091, 38, 17" CvTextArgument="Open" CvType="Button" DesignTimeRectangle="1656, 1083, 110, 33" DesignTimeScaleFactor="1.25" ElementType="Button" FriendlyName="'unchecked'" FullSelectorArgument="&lt;wnd ctrlid='1' title='&amp;amp;Open' /&gt;" FuzzySelectorArgument="&lt;wnd ctrlid='1' title='&amp;amp;Open' check:text='unchecked' /&gt;" Guid="62bdcf59-3a2c-4e8c-b9ed-6fe77f24d200" InformativeScreenshot="9f59e47ebf69801722b63af427101ff2.png" ScopeSelectorArgument="&lt;wnd app='chrome.exe' cls='#32770' title='Open' /&gt;" SearchSteps="Selector, FuzzySelector, CV" Version="V2" Visibility="Interactive" />
+                              </uix:NClick.Target>
+                            </uix:NClick>
+                          </Sequence>
+                        </ActivityAction>
+                      </uix:NApplicationCard.Body>
+                      <uix:NApplicationCard.TargetApp>
+                        <uix:TargetApp Area="0, 0, 1920, 1140" FilePath="C:\Program Files\Google\Chrome\Application\chrome.exe" IconBase64="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" InformativeScreenshot="d93001239567d92e87e6a38f191f7468.png" Selector="&lt;wnd app='chrome.exe' cls='#32770' title='Open' /&gt;" Title="Open" />
+                      </uix:NApplicationCard.TargetApp>
+                    </uix:NApplicationCard>
+                    <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'Start OCR!'" sap:VirtualizedContainerService.HintSize="483.2,157.6" sap2010:WorkflowViewState.IdRef="NClick_2" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="b9c8e7de-e9d6-42ab-b2a2-114e7167b5a2" Version="V3">
+                      <uix:NClick.Target>
+                        <uix:TargetAnchorable BrowserURL="https://ocr.space/" CVScreenId="fd6c0677-983b-46ab-8429-490caf46889c" CvElementArea="1206, 660, 172, 47" CvTextArea="1240, 672, 101, 20" CvTextArgument="Start OCR!" CvType="Button" DesignTimeRectangle="1209, 663, 168, 43" DesignTimeScaleFactor="1.25" ElementType="Text" FriendlyName="'Start OCR!'" FullSelectorArgument="&lt;webctrl parentid='btnStartOCR' tag='A' /&gt;" FuzzySelectorArgument="&lt;webctrl parentid='btnStartOCR' tag='A' type='' class='btn btn-large btn-green-light' aaname='Start OCR!' check:innerText='Start OCR!' /&gt;" Guid="85ac3761-66d8-4528-ae3b-b850c4d81381" InformativeScreenshot="ad2e44748f313abc9407f7324ca729c7.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Free OCR API V2023, Online OCR, Searchable PDF Creator, On-Premise OCR Software' /&gt;" SearchSteps="FuzzySelector, CV" Version="V2" Visibility="Interactive" />
+                      </uix:NClick.Target>
+                    </uix:NClick>
+                    <Delay Duration="00:00:05" sap:VirtualizedContainerService.HintSize="483.2,90.4" sap2010:WorkflowViewState.IdRef="Delay_1" />
+                    <uix:NGetText DisplayName="Get Text 'Text'" sap:VirtualizedContainerService.HintSize="483.2,157.6" sap2010:WorkflowViewState.IdRef="NGetText_1" ScopeIdentifier="b9c8e7de-e9d6-42ab-b2a2-114e7167b5a2" TextString="[OCR]" Version="V3">
+                      <uix:NGetText.Target>
+                        <uix:TargetAnchorable BrowserURL="https://ocr.space/" CVScreenId="fd6c0677-983b-46ab-8429-490caf46889c" CvElementArea="1085, 874, 440, 129" CvType="InputBox" DesignTimeRectangle="1088, 876, 435, 125" DesignTimeScaleFactor="1.25" ElementType="InputBox" FriendlyName="'TEXTAREA txtAreaParsedR…'" FullSelectorArgument="&lt;webctrl id='txtAreaParsedResult' tag='TEXTAREA' /&gt;" FuzzySelectorArgument="&lt;webctrl id='txtAreaParsedResult' tag='TEXTAREA' type='' class='form-control' aaname='' /&gt;" Guid="f84c95e0-682f-47d6-97de-c420046bab99" InformativeScreenshot="eb8216c70d2cb6cf428714f370e7b041.png" IsResponsive="True" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Free OCR API V2023, Online OCR, Searchable PDF Creator, On-Premise OCR Software' /&gt;" SearchSteps="FuzzySelector, CV" Version="V2" Visibility="Interactive">
+                          <uix:TargetAnchorable.Anchors>
+                            <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                              <uix:Target CVScreenId="fd6c0677-983b-46ab-8429-490caf46889c" CvElementArea="1087, 812, 214, 57" CvTextArea="1174, 828, 41, 20" CvTextArgument="Text" CvType="Button" DesignTimeRectangle="1088, 813, 215, 56" ElementType="Text" FriendlyName="'Text'" FullSelectorArgument="&lt;webctrl parentid='exTab1' tag='A' /&gt;" FuzzySelectorArgument="&lt;webctrl parentid='exTab1' tag='A' type='' class='' aaname='Text' check:innerText='Text' /&gt;" SearchSteps="FuzzySelector, CV" />
+                            </scg:List>
+                          </uix:TargetAnchorable.Anchors>
+                        </uix:TargetAnchorable>
+                      </uix:NGetText.Target>
+                    </uix:NGetText>
+                  </Sequence>
+                </ActivityAction>
+              </uix:NApplicationCard.Body>
+              <uix:NApplicationCard.TargetApp>
+                <uix:TargetApp Area="-9, -9, 1938, 1218" BrowserType="Chrome" IconBase64="iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAABGEAAARhAaZtHHIAAAAZdEVYdFNvZnR3YXJlAHd3dy5pbmtzY2FwZS5vcmeb7jwaAAABPElEQVRYR+2XvU7DMBSFg7BbeAjEyAskjsTPAAtiYIQNocY29A2Y2HkhXgyEYGnhXjgNxHUIUmxHSPmkM6S+V9+R2lpK1oVQ5kQq80J5D5w3UZh7aPxElK/yCtU6JD+igWdnIXigayLKm0M6jC7nQPlNSjkH2i9SyzlQkzzXB/TBkzsQO4PKOYPKOdlmbs8mSl8ETWEvJ8o8+oRuPr+CGEzzas8ndIPx8Gzt612f0A3GwzMW6FtgQyp9S7/oh67I0syw06BXgWmhz33DbRFldYzVml4FpLJz33BrSn2F1ZqxwFjgvxRYYLxJogILumuuMd4kQYElX3QYXSdygd/lDF5IfMu+LGWuFVZrWgp0y1cIZU8pd53xXMOMp8Df5SFwCpDcznGUhh8F0ssZFBhGzmwXsx36d1R4bCHLPgAqb7dGtMOrbgAAAABJRU5ErkJggg==" InformativeScreenshot="ad784b6dc546eea5774fe5afce5b4467.jpg" Selector="&lt;html app='chrome.exe' title='Free OCR API V2023, Online OCR, Searchable PDF Creator, On-Premise OCR Software' /&gt;" Title="Free OCR API V2023, Online OCR, Searchable PDF Creator, On-Premise OCR Software" Url="https://ocr.space/" />
+              </uix:NApplicationCard.TargetApp>
+            </uix:NApplicationCard>
+            <ui:Matches FirstMatch="{x:Null}" BuilderPattern="\d{4} \d{4} \d{4}" DisplayName="Find Matching Patterns" sap:VirtualizedContainerService.HintSize="841.6,60" sap2010:WorkflowViewState.IdRef="Matches_1" Input="[OCR]" IsBuilderTabModified="True" Model="[{&quot;Index&quot;:0,&quot;OperationID&quot;:&quot;ADV&quot;,&quot;OperationName&quot;:&quot;Advanced&quot;,&quot;OperationValue&quot;:&quot;\\d{4} \\d{4} \\d{4}&quot;,&quot;QuantifierFirstValue&quot;:&quot;1&quot;,&quot;QuantifierID&quot;:&quot;EXT&quot;,&quot;QuantifierName&quot;:&quot;Exactly&quot;,&quot;QuantifierSecondValue&quot;:null}]" Pattern="\d{4} \d{4} \d{4}" RegexOption="IgnoreCase, Compiled" Result="[Aadhaar_Number]" />
+            <ueab:ExcelProcessScopeX DisplayAlerts="{x:Null}" ExistingProcessAction="{x:Null}" FileConflictResolution="{x:Null}" LaunchMethod="{x:Null}" LaunchTimeout="{x:Null}" MacroSettings="{x:Null}" ProcessMode="{x:Null}" ShowExcelWindow="{x:Null}" DisplayName="Excel Process Scope" sap:VirtualizedContainerService.HintSize="841.6,740" sap2010:WorkflowViewState.IdRef="ExcelProcessScopeX_2">
+              <ueab:ExcelProcessScopeX.Body>
+                <ActivityAction x:TypeArguments="ui:IExcelProcess">
+                  <ActivityAction.Argument>
+                    <DelegateInArgument x:TypeArguments="ui:IExcelProcess" Name="ExcelProcessScopeTag" />
+                  </ActivityAction.Argument>
+                  <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="592,653.6" sap2010:WorkflowViewState.IdRef="Sequence_8">
+                    <sap:WorkflowViewStateService.ViewState>
+                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                      </scg:Dictionary>
+                    </sap:WorkflowViewStateService.ViewState>
+                    <ueab:ExcelApplicationCard Password="{x:Null}" ReadFormatting="{x:Null}" DisplayName="Use Excel File" sap:VirtualizedContainerService.HintSize="529.6,541.6" sap2010:WorkflowViewState.IdRef="ExcelApplicationCard_2" ResizeWindow="None" WorkbookPath="Aadhaar_Verification_Needed.xlsx">
+                      <ueab:ExcelApplicationCard.Body>
+                        <ActivityAction x:TypeArguments="ue:IWorkbookQuickHandle">
+                          <ActivityAction.Argument>
+                            <DelegateInArgument x:TypeArguments="ue:IWorkbookQuickHandle" Name="Excel" />
+                          </ActivityAction.Argument>
+                          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="496,272" sap2010:WorkflowViewState.IdRef="Sequence_7">
+                            <sap:WorkflowViewStateService.ViewState>
+                              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                              </scg:Dictionary>
+                            </sap:WorkflowViewStateService.ViewState>
+                            <ueab:WriteCellX AutoIncrementRow="True" Cell="[Excel.Sheet(&quot;Sheet1&quot;).Cell(&quot;C2&quot;)]" DisplayName="Write Cell" sap:VirtualizedContainerService.HintSize="433.6,160" sap2010:WorkflowViewState.IdRef="WriteCellX_1" Value="[Aadhaar_Number(0).ToString]" />
+                          </Sequence>
+                        </ActivityAction>
+                      </ueab:ExcelApplicationCard.Body>
+                    </ueab:ExcelApplicationCard>
+                  </Sequence>
+                </ActivityAction>
+              </ueab:ExcelProcessScopeX.Body>
+            </ueab:ExcelProcessScopeX>
+            <ueab:ExcelProcessScopeX DisplayAlerts="{x:Null}" ExistingProcessAction="{x:Null}" FileConflictResolution="{x:Null}" LaunchMethod="{x:Null}" LaunchTimeout="{x:Null}" MacroSettings="{x:Null}" ProcessMode="{x:Null}" ShowExcelWindow="{x:Null}" DisplayName="Excel Process Scope" sap:VirtualizedContainerService.HintSize="841.6,749.6" sap2010:WorkflowViewState.IdRef="ExcelProcessScopeX_3">
+              <ueab:ExcelProcessScopeX.Body>
+                <ActivityAction x:TypeArguments="ui:IExcelProcess">
+                  <ActivityAction.Argument>
+                    <DelegateInArgument x:TypeArguments="ui:IExcelProcess" Name="ExcelProcessScopeTag" />
+                  </ActivityAction.Argument>
+                  <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="601.6,663.2" sap2010:WorkflowViewState.IdRef="Sequence_10">
+                    <sap:WorkflowViewStateService.ViewState>
+                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                      </scg:Dictionary>
+                    </sap:WorkflowViewStateService.ViewState>
+                    <ueab:ExcelApplicationCard Password="{x:Null}" ReadFormatting="{x:Null}" DisplayName="Use Excel File" sap:VirtualizedContainerService.HintSize="539.2,551.2" sap2010:WorkflowViewState.IdRef="ExcelApplicationCard_3" ResizeWindow="None" WorkbookPath="Aadhaar_Database.xlsx">
+                      <ueab:ExcelApplicationCard.Body>
+                        <ActivityAction x:TypeArguments="ue:IWorkbookQuickHandle">
+                          <ActivityAction.Argument>
+                            <DelegateInArgument x:TypeArguments="ue:IWorkbookQuickHandle" Name="Excel" />
+                          </ActivityAction.Argument>
+                          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="505.6,281.6" sap2010:WorkflowViewState.IdRef="Sequence_11">
+                            <sap:WorkflowViewStateService.ViewState>
+                              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                              </scg:Dictionary>
+                            </sap:WorkflowViewStateService.ViewState>
+                            <ueab:ReadRangeX DisplayName="Read Range" sap:VirtualizedContainerService.HintSize="443.2,169.6" sap2010:WorkflowViewState.IdRef="ReadRangeX_3" Range="[Excel.Sheet(&quot;Sheet1&quot;)]" SaveTo="[Aadhaar_Database]" />
+                          </Sequence>
+                        </ActivityAction>
+                      </ueab:ExcelApplicationCard.Body>
+                    </ueab:ExcelApplicationCard>
+                  </Sequence>
+                </ActivityAction>
+              </ueab:ExcelProcessScopeX.Body>
+            </ueab:ExcelProcessScopeX>
+            <ui:ForEachRow ColumnNames="{x:Null}" CurrentIndex="{x:Null}" DataTable="[Aadhaar_List]" DisplayName="For Each Row in Data Table" sap:VirtualizedContainerService.HintSize="841.6,3330.4" sap2010:WorkflowViewState.IdRef="ForEachRow_1">
+              <ui:ForEachRow.Body>
+                <ActivityAction x:TypeArguments="sd:DataRow">
+                  <ActivityAction.Argument>
+                    <DelegateInArgument x:TypeArguments="sd:DataRow" Name="Table1" />
+                  </ActivityAction.Argument>
+                  <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="808,3142.4" sap2010:WorkflowViewState.IdRef="Sequence_9">
+                    <sap:WorkflowViewStateService.ViewState>
+                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                      </scg:Dictionary>
+                    </sap:WorkflowViewStateService.ViewState>
+                    <ui:ForEachRow ColumnNames="{x:Null}" CurrentIndex="{x:Null}" DataTable="[Aadhaar_Database]" DisplayName="For Each Row in Data Table" sap:VirtualizedContainerService.HintSize="764.8,816.8" sap2010:WorkflowViewState.IdRef="ForEachRow_2">
+                      <ui:ForEachRow.Body>
+                        <ActivityAction x:TypeArguments="sd:DataRow">
+                          <ActivityAction.Argument>
+                            <DelegateInArgument x:TypeArguments="sd:DataRow" Name="Table2" />
+                          </ActivityAction.Argument>
+                          <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="553.6,628.8" sap2010:WorkflowViewState.IdRef="Sequence_12">
+                            <sap:WorkflowViewStateService.ViewState>
+                              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                              </scg:Dictionary>
+                            </sap:WorkflowViewStateService.ViewState>
+                            <Assign sap:VirtualizedContainerService.HintSize="510.4,80.8" sap2010:WorkflowViewState.IdRef="Assign_11">
+                              <Assign.To>
+                                <OutArgument x:TypeArguments="x:Int32">[Flag]</OutArgument>
+                              </Assign.To>
+                              <Assign.Value>
+                                <InArgument x:TypeArguments="x:Int32">0</InArgument>
+                              </Assign.Value>
+                            </Assign>
+                            <If Condition="[Table2(0).ToString.Contains(Table1(2).ToString)]" sap:VirtualizedContainerService.HintSize="510.4,418.4" sap2010:WorkflowViewState.IdRef="If_1">
+                              <If.Then>
+                                <Sequence sap:VirtualizedContainerService.HintSize="476.8,235.2" sap2010:WorkflowViewState.IdRef="Sequence_13">
+                                  <sap:WorkflowViewStateService.ViewState>
+                                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                    </scg:Dictionary>
+                                  </sap:WorkflowViewStateService.ViewState>
+                                  <Assign sap:VirtualizedContainerService.HintSize="433.6,80.8" sap2010:WorkflowViewState.IdRef="Assign_5">
+                                    <Assign.To>
+                                      <OutArgument x:TypeArguments="x:Int32">[Flag]</OutArgument>
+                                    </Assign.To>
+                                    <Assign.Value>
+                                      <InArgument x:TypeArguments="x:Int32">1</InArgument>
+                                    </Assign.Value>
+                                  </Assign>
+                                  <ui:Break sap:VirtualizedContainerService.HintSize="433.6,24.8" sap2010:WorkflowViewState.IdRef="Break_2" />
+                                </Sequence>
+                              </If.Then>
+                              <If.Else>
+                                <Sequence sap:VirtualizedContainerService.HintSize="300,82.4" sap2010:WorkflowViewState.IdRef="Sequence_16">
+                                  <sap:WorkflowViewStateService.ViewState>
+                                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                    </scg:Dictionary>
+                                  </sap:WorkflowViewStateService.ViewState>
+                                </Sequence>
+                              </If.Else>
+                            </If>
+                          </Sequence>
+                        </ActivityAction>
+                      </ui:ForEachRow.Body>
+                    </ui:ForEachRow>
+                    <If Condition="[Flag = 1]" sap:VirtualizedContainerService.HintSize="764.8,2196" sap2010:WorkflowViewState.IdRef="If_5">
+                      <If.Then>
+                        <Sequence sap:VirtualizedContainerService.HintSize="668.8,950.4" sap2010:WorkflowViewState.IdRef="Sequence_40">
+                          <sap:WorkflowViewStateService.ViewState>
+                            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                            </scg:Dictionary>
+                          </sap:WorkflowViewStateService.ViewState>
+                          <ueab:ExcelProcessScopeX DisplayAlerts="{x:Null}" ExistingProcessAction="{x:Null}" FileConflictResolution="{x:Null}" LaunchMethod="{x:Null}" LaunchTimeout="{x:Null}" MacroSettings="{x:Null}" ProcessMode="{x:Null}" ShowExcelWindow="{x:Null}" DisplayName="Excel Process Scope" sap:VirtualizedContainerService.HintSize="625.6,860.8" sap2010:WorkflowViewState.IdRef="ExcelProcessScopeX_11">
+                            <ueab:ExcelProcessScopeX.Body>
+                              <ActivityAction x:TypeArguments="ui:IExcelProcess">
+                                <ActivityAction.Argument>
+                                  <DelegateInArgument x:TypeArguments="ui:IExcelProcess" Name="ExcelProcessScopeTag" />
+                                </ActivityAction.Argument>
+                                <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="592,774.4" sap2010:WorkflowViewState.IdRef="Sequence_39">
+                                  <sap:WorkflowViewStateService.ViewState>
+                                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                    </scg:Dictionary>
+                                  </sap:WorkflowViewStateService.ViewState>
+                                  <ueab:ExcelApplicationCard Password="{x:Null}" ReadFormatting="{x:Null}" DisplayName="Use Excel File" sap:VirtualizedContainerService.HintSize="529.6,662.4" sap2010:WorkflowViewState.IdRef="ExcelApplicationCard_11" ResizeWindow="None" WorkbookPath="Aadhaar_Verification_Needed.xlsx">
+                                    <ueab:ExcelApplicationCard.Body>
+                                      <ActivityAction x:TypeArguments="ue:IWorkbookQuickHandle">
+                                        <ActivityAction.Argument>
+                                          <DelegateInArgument x:TypeArguments="ue:IWorkbookQuickHandle" Name="Excel" />
+                                        </ActivityAction.Argument>
+                                        <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="496,392.8" sap2010:WorkflowViewState.IdRef="Sequence_38">
+                                          <sap:WorkflowViewStateService.ViewState>
+                                            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                            </scg:Dictionary>
+                                          </sap:WorkflowViewStateService.ViewState>
+                                          <ueab:WriteCellX Cell="[Excel.Sheet(&quot;Sheet1&quot;).Cell(&quot;D&quot; + RowItr.ToString)]" DisplayName="Write Cell" sap:VirtualizedContainerService.HintSize="433.6,160" sap2010:WorkflowViewState.IdRef="WriteCellX_8" Value="[&quot;Verified&quot;]" />
+                                          <Assign sap:VirtualizedContainerService.HintSize="433.6,80.8" sap2010:WorkflowViewState.IdRef="Assign_9">
+                                            <Assign.To>
+                                              <OutArgument x:TypeArguments="x:Int32">[RowItr]</OutArgument>
+                                            </Assign.To>
+                                            <Assign.Value>
+                                              <InArgument x:TypeArguments="x:Int32">[RowItr + 1]</InArgument>
+                                            </Assign.Value>
+                                          </Assign>
+                                        </Sequence>
+                                      </ActivityAction>
+                                    </ueab:ExcelApplicationCard.Body>
+                                  </ueab:ExcelApplicationCard>
+                                </Sequence>
+                              </ActivityAction>
+                            </ueab:ExcelProcessScopeX.Body>
+                          </ueab:ExcelProcessScopeX>
+                        </Sequence>
+                      </If.Then>
+                      <If.Else>
+                        <Sequence sap:VirtualizedContainerService.HintSize="731.2,1062.4" sap2010:WorkflowViewState.IdRef="Sequence_44">
+                          <sap:WorkflowViewStateService.ViewState>
+                            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                            </scg:Dictionary>
+                          </sap:WorkflowViewStateService.ViewState>
+                          <ueab:ExcelProcessScopeX DisplayAlerts="{x:Null}" ExistingProcessAction="{x:Null}" FileConflictResolution="{x:Null}" LaunchMethod="{x:Null}" LaunchTimeout="{x:Null}" MacroSettings="{x:Null}" ProcessMode="{x:Null}" ShowExcelWindow="{x:Null}" DisplayName="Excel Process Scope" sap:VirtualizedContainerService.HintSize="688,972.8" sap2010:WorkflowViewState.IdRef="ExcelProcessScopeX_12">
+                            <ueab:ExcelProcessScopeX.Body>
+                              <ActivityAction x:TypeArguments="ui:IExcelProcess">
+                                <ActivityAction.Argument>
+                                  <DelegateInArgument x:TypeArguments="ui:IExcelProcess" Name="ExcelProcessScopeTag" />
+                                </ActivityAction.Argument>
+                                <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="654.4,886.4" sap2010:WorkflowViewState.IdRef="Sequence_43">
+                                  <sap:WorkflowViewStateService.ViewState>
+                                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                    </scg:Dictionary>
+                                  </sap:WorkflowViewStateService.ViewState>
+                                  <ueab:ExcelApplicationCard Password="{x:Null}" ReadFormatting="{x:Null}" DisplayName="Use Excel File" sap:VirtualizedContainerService.HintSize="592,774.4" sap2010:WorkflowViewState.IdRef="ExcelApplicationCard_12" ResizeWindow="None" WorkbookPath="Aadhaar_Verification_Needed.xlsx">
+                                    <ueab:ExcelApplicationCard.Body>
+                                      <ActivityAction x:TypeArguments="ue:IWorkbookQuickHandle">
+                                        <ActivityAction.Argument>
+                                          <DelegateInArgument x:TypeArguments="ue:IWorkbookQuickHandle" Name="Excel" />
+                                        </ActivityAction.Argument>
+                                        <Sequence sap:VirtualizedContainerService.HintSize="558.4,504.8" sap2010:WorkflowViewState.IdRef="Sequence_42">
+                                          <sap:WorkflowViewStateService.ViewState>
+                                            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                            </scg:Dictionary>
+                                          </sap:WorkflowViewStateService.ViewState>
+                                          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="496,272" sap2010:WorkflowViewState.IdRef="Sequence_41">
+                                            <sap:WorkflowViewStateService.ViewState>
+                                              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                              </scg:Dictionary>
+                                            </sap:WorkflowViewStateService.ViewState>
+                                            <ueab:WriteCellX Cell="[Excel.Sheet(&quot;Sheet1&quot;).Cell(&quot;D&quot; + RowItr.ToString)]" DisplayName="Write Cell" sap:VirtualizedContainerService.HintSize="433.6,160" sap2010:WorkflowViewState.IdRef="WriteCellX_9" Value="[&quot;Not Verified&quot;]" />
+                                          </Sequence>
+                                          <Assign sap:VirtualizedContainerService.HintSize="496,80.8" sap2010:WorkflowViewState.IdRef="Assign_10">
+                                            <Assign.To>
+                                              <OutArgument x:TypeArguments="x:Int32">[RowItr]</OutArgument>
+                                            </Assign.To>
+                                            <Assign.Value>
+                                              <InArgument x:TypeArguments="x:Int32">[RowItr + 1]</InArgument>
+                                            </Assign.Value>
+                                          </Assign>
+                                        </Sequence>
+                                      </ActivityAction>
+                                    </ueab:ExcelApplicationCard.Body>
+                                  </ueab:ExcelApplicationCard>
+                                </Sequence>
+                              </ActivityAction>
+                            </ueab:ExcelProcessScopeX.Body>
+                          </ueab:ExcelProcessScopeX>
+                        </Sequence>
+                      </If.Else>
+                    </If>
+                  </Sequence>
+                </ActivityAction>
+              </ui:ForEachRow.Body>
+            </ui:ForEachRow>
+            <ueab:ExcelProcessScopeX DisplayAlerts="{x:Null}" ExistingProcessAction="{x:Null}" FileConflictResolution="{x:Null}" LaunchMethod="{x:Null}" LaunchTimeout="{x:Null}" MacroSettings="{x:Null}" ProcessMode="{x:Null}" ShowExcelWindow="{x:Null}" DisplayName="Excel Process Scope" sap:VirtualizedContainerService.HintSize="841.6,749.6" sap2010:WorkflowViewState.IdRef="ExcelProcessScopeX_6">
+              <ueab:ExcelProcessScopeX.Body>
+                <ActivityAction x:TypeArguments="ui:IExcelProcess">
+                  <ActivityAction.Argument>
+                    <DelegateInArgument x:TypeArguments="ui:IExcelProcess" Name="ExcelProcessScopeTag" />
+                  </ActivityAction.Argument>
+                  <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="601.6,663.2" sap2010:WorkflowViewState.IdRef="Sequence_19">
+                    <sap:WorkflowViewStateService.ViewState>
+                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                      </scg:Dictionary>
+                    </sap:WorkflowViewStateService.ViewState>
+                    <ueab:ExcelApplicationCard Password="{x:Null}" ReadFormatting="{x:Null}" DisplayName="Use Excel File" sap:VirtualizedContainerService.HintSize="539.2,551.2" sap2010:WorkflowViewState.IdRef="ExcelApplicationCard_6" ResizeWindow="None" WorkbookPath="Aadhaar_Verification_Needed.xlsx">
+                      <ueab:ExcelApplicationCard.Body>
+                        <ActivityAction x:TypeArguments="ue:IWorkbookQuickHandle">
+                          <ActivityAction.Argument>
+                            <DelegateInArgument x:TypeArguments="ue:IWorkbookQuickHandle" Name="Excel" />
+                          </ActivityAction.Argument>
+                          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="505.6,281.6" sap2010:WorkflowViewState.IdRef="Sequence_20">
+                            <sap:WorkflowViewStateService.ViewState>
+                              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                              </scg:Dictionary>
+                            </sap:WorkflowViewStateService.ViewState>
+                            <ueab:ReadRangeX DisplayName="Read Range" sap:VirtualizedContainerService.HintSize="443.2,169.6" sap2010:WorkflowViewState.IdRef="ReadRangeX_4" Range="[Excel.Sheet(&quot;Sheet1&quot;)]" SaveTo="[Aadhaar_List]" />
+                          </Sequence>
+                        </ActivityAction>
+                      </ueab:ExcelApplicationCard.Body>
+                    </ueab:ExcelApplicationCard>
+                  </Sequence>
+                </ActivityAction>
+              </ueab:ExcelProcessScopeX.Body>
+            </ueab:ExcelProcessScopeX>
+            <ui:ForEachRow ColumnNames="{x:Null}" CurrentIndex="{x:Null}" DataTable="[Aadhaar_List]" DisplayName="For Each Row in Data Table" sap:VirtualizedContainerService.HintSize="841.6,932.8" sap2010:WorkflowViewState.IdRef="ForEachRow_3">
+              <ui:ForEachRow.Body>
+                <ActivityAction x:TypeArguments="sd:DataRow">
+                  <ActivityAction.Argument>
+                    <DelegateInArgument x:TypeArguments="sd:DataRow" Name="CurrentRow" />
+                  </ActivityAction.Argument>
+                  <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="453.6,744.8" sap2010:WorkflowViewState.IdRef="Sequence_21">
+                    <sap:WorkflowViewStateService.ViewState>
+                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                      </scg:Dictionary>
+                    </sap:WorkflowViewStateService.ViewState>
+                    <If Condition="[CurrentRow(3).ToString = &quot;Verified&quot;]" sap:VirtualizedContainerService.HintSize="410.4,655.2" sap2010:WorkflowViewState.IdRef="If_2">
+                      <If.Then>
+                        <Sequence sap:VirtualizedContainerService.HintSize="376.8,236" sap2010:WorkflowViewState.IdRef="Sequence_22">
+                          <sap:WorkflowViewStateService.ViewState>
+                            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                            </scg:Dictionary>
+                          </sap:WorkflowViewStateService.ViewState>
+                          <ui:SendMail Bcc="{x:Null}" Cc="{x:Null}" ContinueOnError="{x:Null}" MailMessage="{x:Null}" ReplyTo="{x:Null}" Result="{x:Null}" SecurePassword="{x:Null}" TimeoutMS="{x:Null}" UseOAuth="{x:Null}" Body="[&quot;Dear &quot; + CurrentRow(0).ToString +&quot;, &quot; + &quot;&#xA;&#xA;Your Aadhaar is Verified&quot;]" DisplayName="Send SMTP Mail Message" Email="210701138@rajalakshmi.edu.in" EnableSSL="True" From="210701138@rajalakshmi.edu.in" sap:VirtualizedContainerService.HintSize="333.6,146.4" sap2010:WorkflowViewState.IdRef="SendMail_1" IgnoreCRL="False" IsBodyHtml="False" Name="Madhan B" Password="Love@Rec123" Port="587" SecureConnection="Auto" Server="smtp.gmail.com" Subject="Regarding Aadhaar Verification Status" To="[CurrentRow(1).ToString]">
+                            <ui:SendMail.Files>
+                              <scg:List x:TypeArguments="InArgument(x:String)" Capacity="0" />
+                            </ui:SendMail.Files>
+                          </ui:SendMail>
+                        </Sequence>
+                      </If.Then>
+                      <If.Else>
+                        <Sequence sap:VirtualizedContainerService.HintSize="376.8,236" sap2010:WorkflowViewState.IdRef="Sequence_23">
+                          <sap:WorkflowViewStateService.ViewState>
+                            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                            </scg:Dictionary>
+                          </sap:WorkflowViewStateService.ViewState>
+                          <ui:SendMail Bcc="{x:Null}" Cc="{x:Null}" ContinueOnError="{x:Null}" MailMessage="{x:Null}" ReplyTo="{x:Null}" Result="{x:Null}" SecurePassword="{x:Null}" TimeoutMS="{x:Null}" UseOAuth="{x:Null}" Body="[&quot;Dear &quot; + CurrentRow(0).ToString +&quot;, &quot; + &quot;&#xA;&#xA;Your Aadhaar is Not Verified&quot;]" DisplayName="Send SMTP Mail Message" Email="210701138@rajalakshmi.edu.in" EnableSSL="True" From="210701138@rajalakshmi.edu.in" sap:VirtualizedContainerService.HintSize="333.6,146.4" sap2010:WorkflowViewState.IdRef="SendMail_2" IgnoreCRL="False" IsBodyHtml="False" Name="Madhan B" Password="Love@Rec123" Port="587" SecureConnection="Auto" Server="smtp.gmail.com" Subject="Regarding Aadhaar Verification Status" To="[CurrentRow(1).ToString]">
+                            <ui:SendMail.Files>
+                              <scg:List x:TypeArguments="InArgument(x:String)" Capacity="0" />
+                            </ui:SendMail.Files>
+                          </ui:SendMail>
+                        </Sequence>
+                      </If.Else>
+                    </If>
+                  </Sequence>
+                </ActivityAction>
+              </ui:ForEachRow.Body>
+            </ui:ForEachRow>
+          </Sequence>
+        </ActivityAction>
+      </ui:ForEach.Body>
+    </ui:ForEach>
+  </Sequence>
+</Activity>
